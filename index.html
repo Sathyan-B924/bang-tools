@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bang! Tools — Setup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/style.css" />
+  <script src="static/data.js"></script>
+  <script src="static/bang.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="brand-text">
+          <div class="brand-title">Bang Tools</div>
+          <div class="brand-sub">Setup + card lookup</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="navlink active" href="./">Setup</a>
+        <a class="navlink" href="cards/">Card lookup</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+
+      <!-- Setup form view -->
+      <section class="card" id="setup-view">
+        <div class="cardhead">
+          <h2>Game setup</h2>
+          <p class="muted">Pick players, pick expansions, generate roles + characters. If the pool is too small for a 2-card draft, it auto-assigns 1 character per player.</p>
+        </div>
+
+        <form class="form" id="setup-form" onsubmit="return runSetupUI(event)">
+          <fieldset class="fieldset">
+            <legend>Players (your usual group)</legend>
+            <div class="options-grid" id="player-grid"></div>
+          </fieldset>
+
+          <div class="field">
+            <label class="label" for="players">Players (manual override)</label>
+            <textarea class="control" id="players" name="players"
+              placeholder="One name per line (or comma-separated)"></textarea>
+            <div class="help">4 to 8 players. Duplicates are auto-removed.</div>
+          </div>
+
+          <fieldset class="fieldset">
+            <legend>Expansions (character count)</legend>
+            <div class="options-grid" id="exp-grid"></div>
+          </fieldset>
+
+          <label class="check inline">
+            <input type="checkbox" id="seating" checked>
+            <span>Randomise seating</span>
+          </label>
+
+          <div id="setup-error" class="alert" style="display:none;margin:0;"></div>
+
+          <button class="btn primary" type="submit">Generate</button>
+        </form>
+      </section>
+
+      <!-- Result view (hidden initially) -->
+      <section class="card" id="result-view" style="display:none;">
+        <div class="cardhead">
+          <h2>Result</h2>
+          <p class="muted" id="result-meta"></p>
+        </div>
+
+        <div id="result-notice" class="notice" style="display:none;">
+          Not enough characters for a 2-card draft. Each player got 1 character (no choice).
+        </div>
+
+        <div class="kv" id="result-kv"></div>
+
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Player</th><th>Characters</th></tr></thead>
+            <tbody id="result-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="actions">
+          <button class="btn" onclick="showSetup()">New setup</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="char-modal" class="modal" aria-hidden="true">
+          <div class="modal-backdrop" data-close="1"></div>
+          <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-top">
+              <div>
+                <div id="modal-title" class="modal-title">Character</div>
+                <div id="modal-meta" class="modal-meta"></div>
+              </div>
+              <button type="button" class="modal-x" data-close="1" aria-label="Close">✕</button>
+            </div>
+            <div class="modal-body">
+              <div id="modal-official" class="panel">
+                <div class="panel-title">Official text</div>
+                <div class="panel-body" id="modal-official-text"></div>
+              </div>
+              <div id="modal-notes" class="panel soft">
+                <div class="panel-title">Notes</div>
+                <div class="panel-body"><ul class="list" id="modal-notes-list"></ul></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+<script>
+(() => {
+  const DEFAULT_PLAYERS = ["Aditya","Sathyan","Rajsri","Charan","Raksha","Rajeev","Suraj"];
+  const EXPANSIONS = [
+    { key: "base",   name: "Base",              exp: "Base" },
+    { key: "dodge",  name: "Dodge City",         exp: "Dodge City" },
+    { key: "wild",   name: "Wild West Show",     exp: "Wild West Show" },
+    { key: "valley", name: "Valley of Shadows",  exp: "Valley of Shadows" },
+  ];
+
+  // Build player checkboxes
+  const playerGrid = document.getElementById("player-grid");
+  const textarea   = document.getElementById("players");
+
+  DEFAULT_PLAYERS.forEach(p => {
+    const lbl = document.createElement("label");
+    lbl.className = "check";
+    lbl.innerHTML = `<input type="checkbox" class="player-check" value="${p}" checked><span>${p}</span>`;
+    playerGrid.appendChild(lbl);
+  });
+
+  function syncTextarea() {
+    const sel = [...document.querySelectorAll(".player-check")]
+      .filter(c => c.checked).map(c => c.value);
+    textarea.value = sel.join("\n");
+  }
+  document.querySelectorAll(".player-check").forEach(c => c.addEventListener("change", syncTextarea));
+  syncTextarea();
+
+  // Build expansion checkboxes with counts
+  const expCounts = expansionCounts();
+  const expGrid = document.getElementById("exp-grid");
+  EXPANSIONS.forEach(({ key, name, exp }) => {
+    const cnt = expCounts[exp] || 0;
+    const lbl = document.createElement("label");
+    lbl.className = "check";
+    lbl.innerHTML = `<input type="checkbox" name="${key}"${key === "base" ? " checked" : ""}><span>${name} <span class="count">(${cnt})</span></span>`;
+    expGrid.appendChild(lbl);
+  });
+
+  // Expose globals needed by buttons
+  window.showSetup = function () {
+    document.getElementById("result-view").style.display = "none";
+    document.getElementById("setup-view").style.display  = "";
+  };
+
+  window.runSetupUI = function (e) {
+    e.preventDefault();
+    const errEl = document.getElementById("setup-error");
+    errEl.style.display = "none";
+
+    const playerNames = parsePlayers(textarea.value);
+    const expansions  = EXPANSIONS
+      .filter(({ key }) => document.querySelector(`input[name="${key}"]`)?.checked)
+      .map(({ exp }) => exp);
+    const randomSeating = document.getElementById("seating").checked;
+
+    let result;
+    try {
+      result = runSetup(playerNames, expansions, randomSeating);
+    } catch (err) {
+      errEl.textContent = err.message;
+      errEl.style.display = "";
+      return false;
+    }
+
+    renderResult(result);
+    document.getElementById("setup-view").style.display  = "none";
+    document.getElementById("result-view").style.display = "";
+    return false;
+  };
+
+  function renderResult(r) {
+    document.getElementById("result-meta").textContent =
+      `Expansions: ${r.expansions.join(", ")} · Pool: ${r.poolCount} · ` +
+      (r.draftSize === 2 ? "2-card draft" : "1-card assign");
+
+    document.getElementById("result-notice").style.display = r.draftSize === 1 ? "" : "none";
+
+    const kv = document.getElementById("result-kv");
+    kv.innerHTML = `
+      <div><span class="k">Sheriff</span><span class="v">${esc(r.sheriff)}</span></div>
+      <div><span class="k">Seating</span><span class="v">${r.seating.map(esc).join(" → ")}</span></div>
+      ${r.roleSummary ? `<div><span class="k">Roles</span><span class="v">${esc(r.roleSummary)}</span></div>` : ""}
+    `;
+
+    const tbody = document.getElementById("result-tbody");
+    tbody.innerHTML = r.assignments.map(a => `
+      <tr>
+        <td>${esc(a.player)}</td>
+        <td>${a.characters.map(c =>
+          `<button type="button" class="charlink" data-char="${esc(c)}">${esc(c)}</button>`
+        ).join(", ")}</td>
+      </tr>
+    `).join("");
+
+    document.querySelectorAll(".charlink").forEach(btn => {
+      btn.addEventListener("click", () => openModal(btn.dataset.char));
+    });
+  }
+
+  function esc(s) {
+    return String(s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+
+  // Modal
+  const modal       = document.getElementById("char-modal");
+  const modalTitle  = document.getElementById("modal-title");
+  const modalMeta   = document.getElementById("modal-meta");
+  const officialBox = document.getElementById("modal-official");
+  const officialTxt = document.getElementById("modal-official-text");
+  const notesBox    = document.getElementById("modal-notes");
+  const notesList   = document.getElementById("modal-notes-list");
+
+  window.openModal = function(name) {
+    const e = CHARACTERS[name] || null;
+    modalTitle.textContent = name;
+    const parts = [];
+    if (e?.expansion)   parts.push(e.expansion);
+    if (e?.life_points != null) parts.push("LP: " + e.life_points);
+    modalMeta.textContent = parts.join(" · ");
+
+    const off = (e?.official_text || "").trim();
+    if (off) { officialTxt.textContent = off; officialBox.style.display = ""; }
+    else       officialBox.style.display = "none";
+
+    const notes = Array.isArray(e?.notes) ? e.notes : [];
+    notesList.innerHTML = "";
+    if (notes.length) {
+      notes.forEach(n => { const li = document.createElement("li"); li.textContent = n; notesList.appendChild(li); });
+      notesBox.style.display = "";
+    } else { notesBox.style.display = "none"; }
+
+    modal.classList.add("open"); modal.setAttribute("aria-hidden","false");
+    document.body.style.overflow = "hidden";
+  };
+
+  function closeModal() {
+    modal.classList.remove("open"); modal.setAttribute("aria-hidden","true");
+    document.body.style.overflow = "";
+  }
+
+  modal.addEventListener("click", e => { if (e.target?.dataset?.close) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeModal(); });
+})();
+</script>
+</body>
+</html>

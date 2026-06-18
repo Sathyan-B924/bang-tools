@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bang! Tools — Card Lookup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <script src="../static/data.js"></script>
+  <script src="../static/bang.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="brand-text">
+          <div class="brand-title">Bang Tools</div>
+          <div class="brand-sub">Setup + card lookup</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="navlink" href="../">Setup</a>
+        <a class="navlink active" href="./">Card lookup</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <section class="card">
+        <div class="cardhead">
+          <h2>Card lookup</h2>
+          <p class="muted">Search by name or alias. Filter by category if needed.</p>
+        </div>
+
+        <div id="cat-rule" class="notice green" style="display:none;"></div>
+
+        <form class="form" onsubmit="return doSearch(event)">
+          <div class="form-grid">
+            <div class="field">
+              <label class="label">Name</label>
+              <input class="control" type="text" id="q"
+                placeholder="e.g. Gatling, Barrel, Duel, Volcanic, Birra"
+                autocomplete="off" />
+              <div class="help">Case-insensitive. Aliases work if present in data.</div>
+            </div>
+            <div class="field">
+              <label class="label">Category</label>
+              <select class="control" id="category" onchange="onCategoryChange()">
+                <option value="all">All</option>
+                <option value="characters">Characters</option>
+                <option value="brown">Brown</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+              </select>
+              <div class="btnrow">
+                <button class="btn primary" type="submit">Search</button>
+                <button class="btn" type="button" onclick="clearSearch()">Clear</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div id="no-match" class="alert" style="display:none;">No match found.</div>
+
+        <div id="result-area" style="display:none;" class="result">
+          <div class="result-top">
+            <div>
+              <div class="result-title" id="res-name"></div>
+              <div class="chips" id="res-chips"></div>
+            </div>
+          </div>
+          <div id="res-official" class="panel" style="display:none;">
+            <div class="panel-title">Official text</div>
+            <div class="panel-body" id="res-official-text"></div>
+          </div>
+          <div id="res-notes" class="panel soft" style="display:none;">
+            <div class="panel-title">Notes</div>
+            <div class="panel-body"><ul class="list" id="res-notes-list"></ul></div>
+          </div>
+          <div id="res-aliases" class="panel soft" style="display:none;">
+            <div class="panel-title">Aliases</div>
+            <div class="panel-body" id="res-aliases-text"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+<script>
+(() => {
+  function esc(s) {
+    return String(s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+
+  function showCatRule(category) {
+    const catRuleEl = document.getElementById("cat-rule");
+    const rules = DB.category_rules || {};
+    if (category !== "all" && rules[category]?.rule) {
+      catRuleEl.innerHTML = `<strong>Category rule:</strong> ${esc(rules[category].rule)}`;
+      catRuleEl.style.display = "";
+    } else {
+      catRuleEl.style.display = "none";
+    }
+  }
+
+  window.onCategoryChange = function() {
+    showCatRule(document.getElementById("category").value);
+  };
+
+  window.doSearch = function(e) {
+    if (e) e.preventDefault();
+    const q        = document.getElementById("q").value.trim();
+    const category = document.getElementById("category").value;
+    const noMatch  = document.getElementById("no-match");
+    const area     = document.getElementById("result-area");
+
+    noMatch.style.display = "none";
+    area.style.display    = "none";
+
+    if (!q) return false;
+
+    const entry = lookupCard(q, category);
+    if (!entry) { noMatch.style.display = ""; return false; }
+
+    document.getElementById("res-name").textContent = entry.name;
+
+    const chips = [];
+    chips.push(`<span class="chip">${esc(entry.category.replace(/_/g, " "))}</span>`);
+    if (entry.expansion) chips.push(`<span class="chip">${esc(entry.expansion)}</span>`);
+    if (entry.life_points != null) chips.push(`<span class="chip">LP: ${esc(String(entry.life_points))}</span>`);
+    document.getElementById("res-chips").innerHTML = chips.join("");
+
+    const off = (entry.official_text || "").trim();
+    if (off) {
+      document.getElementById("res-official-text").textContent = off;
+      document.getElementById("res-official").style.display = "";
+    } else { document.getElementById("res-official").style.display = "none"; }
+
+    const notes = Array.isArray(entry.notes) ? entry.notes : [];
+    const notesList = document.getElementById("res-notes-list");
+    notesList.innerHTML = "";
+    if (notes.length) {
+      notes.forEach(n => { const li = document.createElement("li"); li.textContent = n; notesList.appendChild(li); });
+      document.getElementById("res-notes").style.display = "";
+    } else { document.getElementById("res-notes").style.display = "none"; }
+
+    const aliases = Array.isArray(entry.aliases) ? entry.aliases : [];
+    if (aliases.length) {
+      document.getElementById("res-aliases-text").textContent = aliases.join(", ");
+      document.getElementById("res-aliases").style.display = "";
+    } else { document.getElementById("res-aliases").style.display = "none"; }
+
+    area.style.display = "";
+    return false;
+  };
+
+  window.clearSearch = function() {
+    document.getElementById("q").value = "";
+    document.getElementById("category").value = "all";
+    document.getElementById("no-match").style.display    = "none";
+    document.getElementById("result-area").style.display = "none";
+    document.getElementById("cat-rule").style.display    = "none";
+  };
+})();
+</script>
+</body>
+</html>
