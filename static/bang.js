@@ -70,7 +70,7 @@ function normalise(s) { return s.trim().replace(/\s+/g, ' ').toLowerCase(); }
 
 function buildIndex() {
   const index = {};
-  for (const cat of ['characters', 'brown', 'blue', 'green']) {
+  for (const cat of ['characters', 'brown', 'blue', 'green', 'events']) {
     for (const [name, entry] of Object.entries(DB[cat] || {})) {
       if (typeof entry !== 'object') continue;
       for (const k of [name, ...(entry.aliases || [])]) {
@@ -96,7 +96,7 @@ function lookupCard(q, category) {
     return { name: hit.name, category: hit.cat, ...raw };
   }
 
-  const cats = category === 'all' ? ['characters','brown','blue','green'] : [category];
+  const cats = category === 'all' ? ['characters','brown','blue','green','events'] : [category];
   for (const cat of cats) {
     for (const [name, raw] of Object.entries(DB[cat] || {})) {
       if (normalise(name) === qq) return { name, category: cat, ...raw };

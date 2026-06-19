@@ -18,7 +18,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Apache",
-      "ApacheKid"
+      "ApacheKid",
+      "Kid",
+      "Apache Kid"
     ]
   },
   "Bart Cassidy": {
@@ -31,7 +33,10 @@ const CHARACTERS = {
       "If he is eliminated and cannot be saved, no extra draw after elimination."
     ],
     "aliases": [
-      "Bart"
+      "Bart",
+      "Cassidy",
+      "BartCassidy",
+      "Bart Cassidy"
     ]
   },
   "Belle Star": {
@@ -43,7 +48,10 @@ const CHARACTERS = {
       "Disables other players’ in-play cards (blue/green) only for the duration of her turn."
     ],
     "aliases": [
-      "Belle"
+      "Belle",
+      "Star",
+      "BelleStar",
+      "Belle Star"
     ]
   },
   "Big Spencer": {
@@ -55,7 +63,9 @@ const CHARACTERS = {
       "The restriction on Missed! applies whenever he would normally play one."
     ],
     "aliases": [
-      "Spencer"
+      "Spencer",
+      "BigSpencer",
+      "Big Spencer"
     ]
   },
   "Bill Noface": {
@@ -69,7 +79,9 @@ const CHARACTERS = {
     "aliases": [
       "Bill No-Face",
       "BillNoFace",
-      "NoFace"
+      "NoFace",
+      "Bill",
+      "Bill Noface"
     ]
   },
   "Black Flower": {
@@ -81,7 +93,9 @@ const CHARACTERS = {
       "The extra BANG! must come from a Clubs-suit card."
     ],
     "aliases": [
-      "BlackFlower"
+      "BlackFlower",
+      "Flower",
+      "Black Flower"
     ]
   },
   "Black Jack": {
@@ -93,7 +107,9 @@ const CHARACTERS = {
       "If an effect reduces his draw so he only draws 1 card in Phase 1, there is no 'second card' to reveal, so the ability does nothing."
     ],
     "aliases": [
-      "BlackJack"
+      "BlackJack",
+      "Jack",
+      "Black Jack"
     ]
   },
   "Calamity Janet": {
@@ -106,7 +122,10 @@ const CHARACTERS = {
       "Duel: she can respond using Missed! as BANG!."
     ],
     "aliases": [
-      "Janet"
+      "Janet",
+      "Calamity",
+      "CalamityJanet",
+      "Calamity Janet"
     ]
   },
   "Chuck Wengam": {
@@ -118,7 +137,10 @@ const CHARACTERS = {
       "If his turn is skipped or he otherwise cannot act (no usable turn), he cannot use this ability."
     ],
     "aliases": [
-      "Chuck"
+      "Chuck",
+      "Wengam",
+      "ChuckWengam",
+      "Chuck Wengam"
     ]
   },
   "Colorado Bill": {
@@ -129,7 +151,10 @@ const CHARACTERS = {
       "A Spades result bypasses Missed!, Barrel, and Jourdonnais’ ability (those defences do not work against that shot)."
     ],
     "aliases": [
-      "ColoradoBill"
+      "ColoradoBill",
+      "Colorado",
+      "Bill",
+      "Colorado Bill"
     ]
   },
   "Der Spot-Burst Ringer": {
@@ -142,7 +167,8 @@ const CHARACTERS = {
     "aliases": [
       "Spot-Burst Ringer",
       "Der Spot Burst Ringer",
-      "DerSpotBurstRinger"
+      "DerSpotBurstRinger",
+      "Spot Burst Ringer"
     ]
   },
   "Doc Holyday": {
@@ -157,7 +183,10 @@ const CHARACTERS = {
     "aliases": [
       "Doc Holliday",
       "DocHolyday",
-      "Holyday"
+      "Holyday",
+      "Doc",
+      "Holliday",
+      "Doc Holyday"
     ]
   },
   "El Gringo": {
@@ -170,7 +199,9 @@ const CHARACTERS = {
       "If El Gringo plays Duel and loses, his ability does not trigger (he played the Duel)."
     ],
     "aliases": [
-      "Gringo"
+      "Gringo",
+      "ElGringo",
+      "El Gringo"
     ]
   },
   "Elena Fuente": {
@@ -183,7 +214,10 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Elene Fuente",
-      "ElenaFuente"
+      "ElenaFuente",
+      "Elena",
+      "Fuente",
+      "Elena Fuente"
     ]
   },
   "Evelyn Shebang": {
@@ -196,7 +230,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Evelyn",
-      "EvelynShebang"
+      "EvelynShebang",
+      "Shebang",
+      "Evelyn Shebang"
     ]
   },
   "Flint Westwood": {
@@ -212,7 +248,8 @@ const CHARACTERS = {
       "Flint",
       "Flintwestwood",
       "Flint West Wood",
-      "WestWood"
+      "WestWood",
+      "Westwood"
     ]
   },
   "Gary Looter": {
@@ -224,7 +261,10 @@ const CHARACTERS = {
       "Does not collect cards discarded during a turn for other reasons."
     ],
     "aliases": [
-      "Gary"
+      "Gary",
+      "Looter",
+      "GaryLooter",
+      "Gary Looter"
     ]
   },
   "Greg Digger": {
@@ -236,7 +276,10 @@ const CHARACTERS = {
       "Ghost Town: when a ghost later 'leaves play' again, that counts as being eliminated again for Greg’s trigger."
     ],
     "aliases": [
-      "Greg"
+      "Greg",
+      "Digger",
+      "GregDigger",
+      "Greg Digger"
     ]
   },
   "Greygory Deck": {
@@ -251,7 +294,9 @@ const CHARACTERS = {
     "aliases": [
       "Gregory Deck",
       "GreygoryDeck",
-      "Deck"
+      "Deck",
+      "Greygory",
+      "Greygory Deck"
     ]
   },
   "Henry Block": {
@@ -265,7 +310,10 @@ const CHARACTERS = {
       "Does not trigger on automatic abilities like El Gringo’s."
     ],
     "aliases": [
-      "HenryBlock"
+      "HenryBlock",
+      "Henry",
+      "Block",
+      "Henry Block"
     ]
   },
   "Herb Hunter": {
@@ -277,7 +325,10 @@ const CHARACTERS = {
       "Stacks with Outlaw rewards if the elimination also grants those."
     ],
     "aliases": [
-      "Herb"
+      "Herb",
+      "Hunter",
+      "HerbHunter",
+      "Herb Hunter"
     ]
   },
   "Jesse Jones": {
@@ -288,7 +339,10 @@ const CHARACTERS = {
       "If the chosen player has no hand cards, he draws from the deck."
     ],
     "aliases": [
-      "Jesse"
+      "Jesse",
+      "Jones",
+      "JesseJones",
+      "Jesse Jones"
     ]
   },
   "John Pain": {
@@ -301,7 +355,10 @@ const CHARACTERS = {
       "Example: a Beer gained this way cannot save him if he simultaneously loses his last life."
     ],
     "aliases": [
-      "JohnPain"
+      "JohnPain",
+      "John",
+      "Pain",
+      "John Pain"
     ]
   },
   "Jose Delgado": {
@@ -314,7 +371,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Jose",
-      "JoseDelgado"
+      "JoseDelgado",
+      "Delgado",
+      "Jose Delgado"
     ]
   },
   "Jourdonnais": {
@@ -327,7 +386,6 @@ const CHARACTERS = {
       "Versus Slab the Killer: a successful Barrel-style cancel counts as only 1 Missed!, so Slab still requires another Missed! to fully cancel."
     ],
     "aliases": [
-      "Jourdonnais",
       "Jourdonnais"
     ]
   },
@@ -339,7 +397,10 @@ const CHARACTERS = {
       "If an effect changes how many cards he draws in Phase 1, the 'look at 3' remains, but how many he keeps can change accordingly."
     ],
     "aliases": [
-      "Kit"
+      "Kit",
+      "Carlson",
+      "KitCarlson",
+      "Kit Carlson"
     ]
   },
   "Lee Van Kliff": {
@@ -354,7 +415,10 @@ const CHARACTERS = {
     ],
     "aliases": [
       "LeeVanKliff",
-      "Van Kliff"
+      "Van Kliff",
+      "Lee",
+      "VanKliff",
+      "Lee Van Kliff"
     ]
   },
   "Lemonade Jim": {
@@ -365,7 +429,10 @@ const CHARACTERS = {
       "Optional each time a Beer is played by someone else."
     ],
     "aliases": [
-      "LemonadeJim"
+      "LemonadeJim",
+      "Lemonade",
+      "Jim",
+      "Lemonade Jim"
     ]
   },
   "Lucky Duke": {
@@ -377,7 +444,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Lucky",
-      "LuckyDuke"
+      "LuckyDuke",
+      "Duke",
+      "Lucky Duke"
     ]
   },
   "Mick Defender": {
@@ -390,7 +459,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Mick",
-      "MickDefender"
+      "MickDefender",
+      "Defender",
+      "Mick Defender"
     ]
   },
   "Molly Stark": {
@@ -403,7 +474,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Molly",
-      "MollyStark"
+      "MollyStark",
+      "Stark",
+      "Molly Stark"
     ]
   },
   "Pat Brennan": {
@@ -416,7 +489,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Pat",
-      "PatBrennan"
+      "PatBrennan",
+      "Brennan",
+      "Pat Brennan"
     ]
   },
   "Paul Regret": {
@@ -427,7 +502,10 @@ const CHARACTERS = {
       "Stacks with a real Mustang for +2."
     ],
     "aliases": [
-      "Paul"
+      "Paul",
+      "Regret",
+      "PaulRegret",
+      "Paul Regret"
     ]
   },
   "Pedro Ramirez": {
@@ -439,7 +517,10 @@ const CHARACTERS = {
       "Still applies if he returns temporarily via effects that give him a turn."
     ],
     "aliases": [
-      "Pedro"
+      "Pedro",
+      "Ramirez",
+      "PedroRamirez",
+      "Pedro Ramirez"
     ]
   },
   "Pixie Pete": {
@@ -452,7 +533,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Pixie",
-      "PixiePete"
+      "PixiePete",
+      "Pete",
+      "Pixie Pete"
     ]
   },
   "Rose Doolan": {
@@ -463,7 +546,10 @@ const CHARACTERS = {
       "Stacks with a real Scope/Binocular for -2."
     ],
     "aliases": [
-      "Rose"
+      "Rose",
+      "Doolan",
+      "RoseDoolan",
+      "Rose Doolan"
     ]
   },
   "Sean Mallory": {
@@ -476,7 +562,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Sean",
-      "SeanMallory"
+      "SeanMallory",
+      "Mallory",
+      "Sean Mallory"
     ]
   },
   "Sid Ketchum": {
@@ -488,7 +576,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Sid",
-      "SidKetchum"
+      "SidKetchum",
+      "Ketchum",
+      "Sid Ketchum"
     ]
   },
   "Slab the Killer": {
@@ -502,7 +592,10 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Slab",
-      "SlabTheKiller"
+      "SlabTheKiller",
+      "Slab The Killer",
+      "The Killer",
+      "Killer"
     ]
   },
   "Suzy Lafayette": {
@@ -515,7 +608,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Suzy",
-      "SuzyLafayette"
+      "SuzyLafayette",
+      "Lafayette",
+      "Suzy Lafayette"
     ]
   },
   "Tequila Joe": {
@@ -527,7 +622,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Tequila",
-      "TequilaJoe"
+      "TequilaJoe",
+      "Joe",
+      "Tequila Joe"
     ]
   },
   "Teren Kill": {
@@ -539,7 +636,10 @@ const CHARACTERS = {
       "If the draw is Spades, he cannot play Beer to save himself."
     ],
     "aliases": [
-      "TerenKill"
+      "TerenKill",
+      "Teren",
+      "Kill",
+      "Teren Kill"
     ]
   },
   "Tuco Franziskaner": {
@@ -553,7 +653,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Tuco",
-      "TucoFranziskaner"
+      "TucoFranziskaner",
+      "Franziskaner",
+      "Tuco Franziskaner"
     ]
   },
   "Vera Custer": {
@@ -566,7 +668,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Vera",
-      "VeraCuster"
+      "VeraCuster",
+      "Custer",
+      "Vera Custer"
     ]
   },
   "Vulture Sam": {
@@ -580,7 +684,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Sam",
-      "VultureSam"
+      "VultureSam",
+      "Vulture",
+      "Vulture Sam"
     ]
   },
   "Willy the Kid": {
@@ -593,7 +699,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "Willy",
-      "WillyTheKid"
+      "WillyTheKid",
+      "The Kid",
+      "Willy The Kid"
     ]
   },
   "Youl Grinner": {
@@ -607,7 +715,9 @@ const CHARACTERS = {
     ],
     "aliases": [
       "YoulGrinner",
-      "Grinner"
+      "Grinner",
+      "Youl",
+      "Youl Grinner"
     ]
   }
 };
@@ -619,10 +729,9 @@ const BROWN = {
       "The target avoids it with the normal defence for a Bang effect; no extra defences are required just because Aim is attached."
     ],
     "aliases": [
+      "Aim",
       "Mira",
-      "AIM",
-      "Aim (Mira)",
-      "Mira (Aim)"
+      "AIM"
     ]
   },
   "Backfire": {
@@ -632,9 +741,10 @@ const BROWN = {
       "The return shot is a normal Bang effect and can be cancelled normally by the shooter’s defence."
     ],
     "aliases": [
+      "Backfire",
       "Ritorno di Fiamma",
-      "Backfire (Ritorno di Fiamma)",
-      "Ritorno di Fiamma (Backfire)"
+      "Ritorno di fiamma",
+      "Ritorno"
     ]
   },
   "Bandidos": {
@@ -644,8 +754,7 @@ const BROWN = {
       "Affects everyone, including the player who played it (unless your edition rules say otherwise)."
     ],
     "aliases": [
-      "Bandidos",
-      "Bandidos (Bandidos)"
+      "Bandidos"
     ]
   },
   "Bang!": {
@@ -654,10 +763,10 @@ const BROWN = {
       "You can play only 1 Bang! card per turn unless a rule/card explicitly changes that (e.g., Volcanic)."
     ],
     "aliases": [
-      "BANG!",
+      "Bang!",
       "Bang",
       "BANG",
-      "BANG! (BANG!)"
+      "BANG!"
     ]
   },
   "Beer": {
@@ -668,9 +777,8 @@ const BROWN = {
       "Beer has no effect with only 2 players left."
     ],
     "aliases": [
-      "Birra",
-      "Beer (Birra)",
-      "Birra (Beer)"
+      "Beer",
+      "Birra"
     ]
   },
   "Brawl": {
@@ -680,9 +788,8 @@ const BROWN = {
       "If a player has no cards at all, they discard nothing."
     ],
     "aliases": [
-      "Rissa",
-      "Brawl (Rissa)",
-      "Rissa (Brawl)"
+      "Brawl",
+      "Rissa"
     ]
   },
   "Cat Balou": {
@@ -693,7 +800,8 @@ const BROWN = {
     ],
     "aliases": [
       "Cat Balou",
-      "CatBalou"
+      "CatBalou",
+      "Balou"
     ]
   },
   "Dodge": {
@@ -703,9 +811,8 @@ const BROWN = {
       "After cancelling, you still draw the card."
     ],
     "aliases": [
-      "Schivata",
-      "Dodge (Schivata)",
-      "Schivata (Dodge)"
+      "Dodge",
+      "Schivata"
     ]
   },
   "Duel": {
@@ -714,9 +821,8 @@ const BROWN = {
       "High Noon (Sermon): if you start a Duel on your turn during Sermon, you cannot use Bang! cards on your turn, so you will be unable to discard when it becomes your step and you will lose 1 life if your opponent can discard at least once."
     ],
     "aliases": [
-      "Duello",
-      "Duel (Duello)",
-      "Duello (Duel)"
+      "Duel",
+      "Duello"
     ]
   },
   "Escape": {
@@ -726,9 +832,8 @@ const BROWN = {
       "Official clarifications treat it as usable versus multi-player brown attacks (e.g., Gatling, Indians) for your own protection."
     ],
     "aliases": [
-      "Fuga",
-      "Escape (Fuga)",
-      "Fuga (Escape)"
+      "Escape",
+      "Fuga"
     ]
   },
   "Fanning": {
@@ -737,9 +842,8 @@ const BROWN = {
       "The second shot is mandatory and is fired even if the first shot is cancelled."
     ],
     "aliases": [
-      "Sventagliata",
-      "Fanning (Sventagliata)",
-      "Sventagliata (Fanning)"
+      "Fanning",
+      "Sventagliata"
     ]
   },
   "Gatling": {
@@ -748,8 +852,7 @@ const BROWN = {
       "Gatling is not a 'Bang! card', so it does not consume your '1 Bang! card per turn' limit."
     ],
     "aliases": [
-      "Gatling",
-      "Gatling (Gatling)"
+      "Gatling"
     ]
   },
   "General Store": {
@@ -758,10 +861,10 @@ const BROWN = {
       "No interruptions mid-selection; complete the entire store selection, then the turn continues."
     ],
     "aliases": [
+      "General Store",
+      "GeneralStore",
       "Emporio",
-      "General Store (Emporio)",
-      "Emporio (General Store)",
-      "GeneralStore"
+      "Store"
     ]
   },
   "Indians!": {
@@ -770,10 +873,10 @@ const BROWN = {
       "This is not a Bang attack, so normal Bang defences do not apply unless something explicitly allows it."
     ],
     "aliases": [
-      "Indiani!",
+      "Indians!",
       "Indians",
-      "Indiani",
-      "Indians! (Indiani!)"
+      "Indiani!",
+      "Indiani"
     ]
   },
   "Last Call": {
@@ -783,9 +886,10 @@ const BROWN = {
       "Playable even with 2 players left because the 2-player restriction is specific to Beer."
     ],
     "aliases": [
+      "Last Call",
+      "LastCall",
       "Ultimo Giro",
-      "Last Call (Ultimo Giro)",
-      "Ultimo Giro (Last Call)",
+      "Ultimo giro",
       "UltimoGiro"
     ]
   },
@@ -796,10 +900,10 @@ const BROWN = {
       "Cannot be used against effects that do not use the Bang/Missed interaction unless a rule says otherwise."
     ],
     "aliases": [
-      "Mancato!",
+      "Missed!",
       "Missed",
-      "Mancato",
-      "Missed! (Mancato!)"
+      "Mancato!",
+      "Mancato"
     ]
   },
   "Panic!": {
@@ -808,10 +912,10 @@ const BROWN = {
       "Taking an in-play card (including Dynamite, Jail, green cards) puts it into your hand; you decide later what to do with it on your turn."
     ],
     "aliases": [
-      "Panico!",
+      "Panic!",
       "Panic",
-      "Panico",
-      "Panic! (Panico!)"
+      "Panico!",
+      "Panico"
     ]
   },
   "Poker": {
@@ -820,8 +924,7 @@ const BROWN = {
       "If even one Ace is among the discarded cards, you take zero cards from the pile."
     ],
     "aliases": [
-      "Poker",
-      "Poker (Poker)"
+      "Poker"
     ]
   },
   "Punch": {
@@ -830,9 +933,8 @@ const BROWN = {
       "Still defended like a normal Bang effect."
     ],
     "aliases": [
-      "Pugno",
-      "Punch (Pugno)",
-      "Pugno (Punch)"
+      "Punch",
+      "Pugno"
     ]
   },
   "Rag Time": {
@@ -842,7 +944,8 @@ const BROWN = {
     ],
     "aliases": [
       "Rag Time",
-      "RagTime"
+      "RagTime",
+      "Ragtime"
     ]
   },
   "Saloon": {
@@ -852,8 +955,7 @@ const BROWN = {
       "With 2 players, it heals both players."
     ],
     "aliases": [
-      "Saloon",
-      "Saloon (Saloon)"
+      "Saloon"
     ]
   },
   "Saved!": {
@@ -862,10 +964,10 @@ const BROWN = {
       "Official clarifications allow using it to prevent damage you dealt to yourself (self-inflicted loss)."
     ],
     "aliases": [
-      "Salvo!",
+      "Saved!",
       "Saved",
-      "Salvo",
-      "Saved! (Salvo!)"
+      "Salvo!",
+      "Salvo"
     ]
   },
   "Springfield": {
@@ -874,8 +976,7 @@ const BROWN = {
       "This is a Bang effect card, not a 'Bang! card', so it does not consume the '1 Bang! card per turn' limit."
     ],
     "aliases": [
-      "Springfield",
-      "Springfield (Springfield)"
+      "Springfield"
     ]
   },
   "Stagecoach": {
@@ -884,10 +985,9 @@ const BROWN = {
       "Wild West Show: official rulings treat Stagecoach (and Wells Fargo) as triggers that advance the Wild West Show event deck."
     ],
     "aliases": [
-      "Diligenza",
-      "Stagecoach (Diligenza)",
-      "Diligenza (Stagecoach)",
-      "StageCoach"
+      "Stagecoach",
+      "StageCoach",
+      "Diligenza"
     ]
   },
   "Tequila": {
@@ -896,8 +996,7 @@ const BROWN = {
       "Cannot be used out of turn as a death save."
     ],
     "aliases": [
-      "Tequila",
-      "Tequila (Tequila)"
+      "Tequila"
     ]
   },
   "Tomahawk": {
@@ -906,8 +1005,7 @@ const BROWN = {
       "Can still be used at distance 1."
     ],
     "aliases": [
-      "Tomahawk",
-      "Tomahawk (Tomahawk)"
+      "Tomahawk"
     ]
   },
   "Tornado": {
@@ -916,8 +1014,7 @@ const BROWN = {
       "If a player has no card to discard, they still draw 2."
     ],
     "aliases": [
-      "Tornado",
-      "Tornado (Tornado)"
+      "Tornado"
     ]
   },
   "Wells Fargo": {
@@ -927,7 +1024,8 @@ const BROWN = {
     ],
     "aliases": [
       "Wells Fargo",
-      "WellsFargo"
+      "WellsFargo",
+      "Fargo"
     ]
   },
   "Whisky": {
@@ -936,8 +1034,8 @@ const BROWN = {
       "Cannot be used out of turn as a death save."
     ],
     "aliases": [
-      "Whiskey",
-      "Whisky (Whisky)"
+      "Whisky",
+      "Whiskey"
     ]
   }
 };
@@ -949,9 +1047,8 @@ const BLUE = {
       "Works only on Bang-symbol attacks (not on requirements to discard a Bang! card, such as Indians! or Duel)."
     ],
     "aliases": [
-      "Barile",
-      "Barrel (Barile)",
-      "Barile (Barrel)"
+      "Barrel",
+      "Barile"
     ]
   },
   "Binocular": {
@@ -960,10 +1057,9 @@ const BLUE = {
       "Stacks with other distance modifiers of different names."
     ],
     "aliases": [
-      "Binocolo",
-      "Binocular (Binocolo)",
-      "Binocolo (Binocular)",
-      "Binoculars"
+      "Binocular",
+      "Binoculars",
+      "Binocolo"
     ]
   },
   "Bounty": {
@@ -973,9 +1069,8 @@ const BLUE = {
       "If Aim makes the Bang deal 2, it is still only one 'hit' for Bounty."
     ],
     "aliases": [
-      "Taglia",
-      "Bounty (Taglia)",
-      "Taglia (Bounty)"
+      "Bounty",
+      "Taglia"
     ]
   },
   "Dynamite": {
@@ -985,9 +1080,8 @@ const BLUE = {
       "Start-of-turn ordering can interact with other hazards; follow your ruleset’s official ordering."
     ],
     "aliases": [
-      "Dinamite",
-      "Dynamite (Dinamite)",
-      "Dinamite (Dynamite)"
+      "Dynamite",
+      "Dinamite"
     ]
   },
   "Ghost": {
@@ -997,9 +1091,8 @@ const BLUE = {
       "In Ghost Town context, official ghost rules force discarding all hand cards at the end of the ghost’s turn."
     ],
     "aliases": [
-      "Fantasma",
-      "Ghost (Fantasma)",
-      "Fantasma (Ghost)"
+      "Ghost",
+      "Fantasma"
     ]
   },
   "Hideout": {
@@ -1008,9 +1101,8 @@ const BLUE = {
       "Stacks with other different-name distance increasers."
     ],
     "aliases": [
-      "Riparo",
-      "Hideout (Riparo)",
-      "Riparo (Hideout)"
+      "Hideout",
+      "Riparo"
     ]
   },
   "Jail": {
@@ -1019,9 +1111,8 @@ const BLUE = {
       "Standard rule forbids jailing the Sheriff; some variants remove the Sheriff role, in which case Jail can be played on anyone."
     ],
     "aliases": [
-      "Prigione",
-      "Jail (Prigione)",
-      "Prigione (Jail)"
+      "Jail",
+      "Prigione"
     ]
   },
   "LeMat": {
@@ -1031,8 +1122,7 @@ const BLUE = {
     ],
     "aliases": [
       "LeMat",
-      "Le Mat",
-      "LeMat (LeMat)"
+      "Le Mat"
     ]
   },
   "Mustang": {
@@ -1041,8 +1131,7 @@ const BLUE = {
       "Stacks with Hideout (different names)."
     ],
     "aliases": [
-      "Mustang",
-      "Mustang (Mustang)"
+      "Mustang"
     ]
   },
   "Rattlesnake": {
@@ -1052,11 +1141,10 @@ const BLUE = {
       "Rattlesnake stays in play after triggering unless removed."
     ],
     "aliases": [
+      "Rattlesnake",
       "Serpente a Sonagli",
       "Serpente a sonagli",
-      "Serpente",
-      "Rattlesnake (Serpente a Sonagli)",
-      "Serpente a Sonagli (Rattlesnake)"
+      "Serpente"
     ]
   },
   "Scope": {
@@ -1065,9 +1153,8 @@ const BLUE = {
       "Stacks with Binocular (different names)."
     ],
     "aliases": [
-      "Mirino",
-      "Scope (Mirino)",
-      "Mirino (Scope)"
+      "Scope",
+      "Mirino"
     ]
   },
   "Shotgun": {
@@ -1077,8 +1164,7 @@ const BLUE = {
       "If the target cancels the Bang effect, no discard happens."
     ],
     "aliases": [
-      "Shotgun",
-      "Shotgun (Shotgun)"
+      "Shotgun"
     ]
   },
   "Schofield": {
@@ -1087,8 +1173,7 @@ const BLUE = {
       "Only one weapon can be in play in front of you; playing a new weapon replaces the old one."
     ],
     "aliases": [
-      "Schofield",
-      "Schofield (Schofield)"
+      "Schofield"
     ]
   },
   "Remington": {
@@ -1097,8 +1182,7 @@ const BLUE = {
       "Only one weapon can be in play in front of you; playing a new weapon replaces the old one."
     ],
     "aliases": [
-      "Remington",
-      "Remington (Remington)"
+      "Remington"
     ]
   },
   "Rev. Carabine": {
@@ -1107,11 +1191,13 @@ const BLUE = {
       "Range modifies only what is 'in range' for attacks, not cards that specify their own distance rules."
     ],
     "aliases": [
+      "Rev. Carabine",
       "Rev Carabine",
       "Rev. Carbine",
       "Rev Carbine",
       "Reverend Carabine",
-      "Rev. Carabine (Rev. Carabine)"
+      "Carabine",
+      "Carbine"
     ]
   },
   "Winchester": {
@@ -1120,8 +1206,7 @@ const BLUE = {
       "Only one weapon can be in play in front of you; playing a new weapon replaces the old one."
     ],
     "aliases": [
-      "Winchester",
-      "Winchester (Winchester)"
+      "Winchester"
     ]
   },
   "Volcanic": {
@@ -1130,8 +1215,7 @@ const BLUE = {
       "This changes only the Bang! card limit; it does not change other restrictions printed on other cards."
     ],
     "aliases": [
-      "Volcanic",
-      "Volcanic (Volcanic)"
+      "Volcanic"
     ]
   }
 };
@@ -1144,9 +1228,8 @@ const GREEN = {
       "Because it is green, you must play it a turn earlier; it can be removed before it ever saves you."
     ],
     "aliases": [
-      "Bibbia",
-      "Bible (Bibbia)",
-      "Bibbia (Bible)"
+      "Bible",
+      "Bibbia"
     ]
   },
   "Buffalo Rifle": {
@@ -1156,11 +1239,12 @@ const GREEN = {
       "If removed before use, it does nothing."
     ],
     "aliases": [
+      "Buffalo Rifle",
+      "BuffaloRifle",
       "Fucile da Caccia",
       "Fucile da caccia",
-      "Buffalo Rifle (Fucile da Caccia)",
-      "Fucile da Caccia (Buffalo Rifle)",
-      "BuffaloRifle"
+      "Fucile",
+      "Rifle"
     ]
   },
   "Can-Can": {
@@ -1169,9 +1253,8 @@ const GREEN = {
       "If the target has no cards, it does nothing."
     ],
     "aliases": [
+      "Can-Can",
       "Can Can",
-      "Can-Can (Can Can)",
-      "Can Can (Can-Can)",
       "CanCan"
     ]
   },
@@ -1181,9 +1264,8 @@ const GREEN = {
       "Cannot be used out of turn like Beer."
     ],
     "aliases": [
-      "Borraccia",
-      "Canteen (Borraccia)",
-      "Borraccia (Canteen)"
+      "Canteen",
+      "Borraccia"
     ]
   },
   "Conestoga": {
@@ -1192,8 +1274,7 @@ const GREEN = {
       "If the target has no cards at all, you gain nothing."
     ],
     "aliases": [
-      "Conestoga",
-      "Conestoga (Conestoga)"
+      "Conestoga"
     ]
   },
   "Derringer": {
@@ -1202,8 +1283,7 @@ const GREEN = {
       "The draw is part of the effect of using the card."
     ],
     "aliases": [
-      "Derringer",
-      "Derringer (Derringer)"
+      "Derringer"
     ]
   },
   "Howitzer": {
@@ -1213,8 +1293,7 @@ const GREEN = {
       "Each target defends individually as usual."
     ],
     "aliases": [
-      "Howitzer",
-      "Howitzer (Howitzer)"
+      "Howitzer"
     ]
   },
   "Iron Plate": {
@@ -1224,11 +1303,11 @@ const GREEN = {
       "If you need multiple defences against multiple separate Bang effects, one Iron Plate covers only one."
     ],
     "aliases": [
+      "Iron Plate",
+      "IronPlate",
       "Placca di Ferro",
       "Placca di ferro",
-      "Iron Plate (Placca di Ferro)",
-      "Placca di Ferro (Iron Plate)",
-      "IronPlate"
+      "Placca"
     ]
   },
   "Knife": {
@@ -1237,9 +1316,8 @@ const GREEN = {
       "Still defended like a Bang effect."
     ],
     "aliases": [
-      "Pugnale",
-      "Knife (Pugnale)",
-      "Pugnale (Knife)"
+      "Knife",
+      "Pugnale"
     ]
   },
   "Pepperbox": {
@@ -1248,8 +1326,7 @@ const GREEN = {
       "Reachable distance uses your current range after all distance modifiers."
     ],
     "aliases": [
-      "Pepperbox",
-      "Pepperbox (Pepperbox)"
+      "Pepperbox"
     ]
   },
   "Pony Express": {
@@ -1270,8 +1347,7 @@ const GREEN = {
       "Only usable starting from the next turn after you play it."
     ],
     "aliases": [
-      "Sombrero",
-      "Sombrero (Sombrero)"
+      "Sombrero"
     ]
   },
   "Ten Gallon Hat": {
@@ -1280,10 +1356,456 @@ const GREEN = {
       "Same timing and vulnerability rules as Sombrero."
     ],
     "aliases": [
+      "Ten Gallon Hat",
+      "TenGallonHat",
       "Cappello",
-      "Ten Gallon Hat (Cappello)",
-      "Cappello (Ten Gallon Hat)",
-      "TenGallonHat"
+      "Hat"
+    ]
+  }
+};
+
+const EVENTS = {
+  "Blessing": {
+    "expansion": "High Noon",
+    "official_text": "All cards are considered Hearts (♥).",
+    "notes": [
+      "Barrels always succeed automatically.",
+      "Dynamite will never explode while this event is active."
+    ],
+    "aliases": [
+      "Benedizione",
+      "Blessing (Benedizione)"
+    ]
+  },
+  "Curse": {
+    "expansion": "High Noon",
+    "official_text": "All cards are considered Spades (♠).",
+    "notes": [
+      "Barrels automatically fail.",
+      "Dynamite explodes on any draw from 2 to 9."
+    ],
+    "aliases": [
+      "Maledizione",
+      "Curse (Maledizione)"
+    ]
+  },
+  "The Daltons": {
+    "expansion": "High Noon",
+    "official_text": "When entered, each player who has blue cards in play must choose and discard one.",
+    "notes": [
+      "Triggers immediately upon being revealed.",
+      "If a player has no blue cards in play, they are unaffected."
+    ],
+    "aliases": [
+      "I Dalton",
+      "Daltons",
+      "The Daltons (I Dalton)"
+    ]
+  },
+  "The Doctor": {
+    "expansion": "High Noon",
+    "official_text": "When entered, the player(s) with the fewest current life points recover 1 life point.",
+    "notes": [
+      "Triggers immediately upon being revealed.",
+      "If multiple players are tied for the lowest life points, all of them recover 1 life."
+    ],
+    "aliases": [
+      "Il Dottore",
+      "Doctor",
+      "The Doctor (Il Dottore)"
+    ]
+  },
+  "Ghost Town": {
+    "expansion": "High Noon",
+    "official_text": "Eliminated players return to the game as ghosts during their turn only.",
+    "notes": [
+      "Ghosts draw 3 cards instead of 2 during Phase 1.",
+      "They cannot be eliminated during their turn.",
+      "They discard all cards and return to being dead as soon as their turn ends."
+    ],
+    "aliases": [
+      "Città Fantasma",
+      "Ghost Town (Città Fantasma)"
+    ]
+  },
+  "Gold Rush": {
+    "expansion": "High Noon",
+    "official_text": "The game proceeds counter-clockwise, starting from the Sheriff.",
+    "notes": [
+      "Turn order reverses completely.",
+      "Card-specific directions (like passing cards via General Store) still move clockwise."
+    ],
+    "aliases": [
+      "Corsa all'Oro",
+      "Gold Rush (Corsa all'Oro)"
+    ]
+  },
+  "Hangover": {
+    "expansion": "High Noon",
+    "official_text": "All characters lose their special abilities.",
+    "notes": [
+      "Suppresses both active and passive character abilities for the entire round."
+    ],
+    "aliases": [
+      "Sbornia",
+      "Hangover (Sbornia)"
+    ]
+  },
+  "Shootout": {
+    "expansion": "High Noon",
+    "official_text": "Each player may play one additional BANG! card during their turn.",
+    "notes": [
+      "Allows players to play up to 2 BANG! cards per turn naturally."
+    ],
+    "aliases": [
+      "Sparatoria",
+      "Shootout (Sparatoria)"
+    ]
+  },
+  "The Reverend": {
+    "expansion": "High Noon",
+    "official_text": "Players cannot play Beer cards.",
+    "notes": [
+      "Bans healing via Beer completely for the round."
+    ],
+    "aliases": [
+      "Il Reverendo",
+      "Reverend",
+      "The Reverend (Il Reverendo)"
+    ]
+  },
+  "The Sermon": {
+    "expansion": "High Noon",
+    "official_text": "Players cannot play BANG! cards during their turn.",
+    "notes": [
+      "Using BANG! cards out of turn (e.g., responding to Indians! or a Duel) is still permitted."
+    ],
+    "aliases": [
+      "Il Predicatore",
+      "Sermon",
+      "The Sermon (Il Predicatore)"
+    ]
+  },
+  "Thirst": {
+    "expansion": "High Noon",
+    "official_text": "Players draw 1 less card during Phase 1.",
+    "notes": [
+      "Reduces the standard Phase 1 draw down to 1 card."
+    ],
+    "aliases": [
+      "Sete",
+      "Thirst (Sete)"
+    ]
+  },
+  "Train Arrival": {
+    "expansion": "High Noon",
+    "official_text": "Players draw 1 extra card during Phase 1.",
+    "notes": [
+      "Increases the standard Phase 1 draw up to 3 cards."
+    ],
+    "aliases": [
+      "Arrivo del Treno",
+      "Train Arrival (Arrivo del Treno)"
+    ]
+  },
+  "High Noon": {
+    "expansion": "High Noon",
+    "official_text": "At the start of their turn, each player loses 1 life point.",
+    "notes": [
+      "This is the final card and stays active permanently until the game ends.",
+      "Can eliminate a player at the very start of their turn before they can act."
+    ],
+    "aliases": [
+      "Mezzogiorno di Fuoco",
+      "High Noon (Mezzogiorno di Fuoco)"
+    ]
+  },
+  "Abandoned Mine": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "During Phase 1, players must draw their cards face-up from the discard pile.",
+    "notes": [
+      "If the discard pile runs out, players draw the remaining required cards from the main deck."
+    ],
+    "aliases": [
+      "Miniera Abbandonata",
+      "Abandoned Mine (Miniera Abbandonata)"
+    ]
+  },
+  "Ambush": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "The base distance between all players is considered exactly 1.",
+    "notes": [
+      "Seating arrangements are ignored for distance rules.",
+      "Modifying cards like Mustangs, Scopes, and Weapons still alter this base value normally."
+    ],
+    "aliases": [
+      "Imboscata",
+      "Ambush (Imboscata)"
+    ]
+  },
+  "Blood Brothers": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "At the start of their turn, a player may choose to give 1 of their life points to any other player.",
+    "notes": [
+      "The player must have more than 1 life point remaining to use this ability."
+    ],
+    "aliases": [
+      "Fratelli di Sangue",
+      "Blood Brothers (Fratelli di Sangue)"
+    ]
+  },
+  "Dead Man": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "On their turn, the first player who was eliminated returns to the game with 2 life points and 2 cards.",
+    "notes": [
+      "Applies strictly to the very first player eliminated in the match."
+    ],
+    "aliases": [
+      "Il Morto",
+      "Dead Man",
+      "DeadMan",
+      "Il Morto (Dead Man)"
+    ]
+  },
+  "Hard Liquor": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "A player may choose to skip Phase 1 entirely to instantly regain 1 life point.",
+    "notes": [
+      "Forfeits drawing cards for the turn in exchange for healing 1 point."
+    ],
+    "aliases": [
+      "Liquore Forte",
+      "Hard Liquor (Liquore Forte)"
+    ]
+  },
+  "Lasso": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "All cards in play (blue-bordered and green-bordered) lose their effects for the round.",
+    "notes": [
+      "Temporarily disables all equipped weapons, barrels, and items on the table."
+    ],
+    "aliases": [
+      "Lasso",
+      "Lasso (Lasso)"
+    ]
+  },
+  "Law of the West": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "During Phase 1, players must reveal the second card they draw; if it can be legally played, they must play it.",
+    "notes": [
+      "If the card cannot be legally played on their turn, it is kept in hand normally."
+    ],
+    "aliases": [
+      "Legge del West",
+      "Law of the West (Legge del West)"
+    ]
+  },
+  "Peyote": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "In Phase 1, the player guesses the suit color (Red/Black) before drawing each card.",
+    "notes": [
+      "If correct, the player keeps the card and guesses again.",
+      "If wrong, the card is discarded and Phase 1 ends immediately."
+    ],
+    "aliases": [
+      "Peyote",
+      "Peyote (Peyote)"
+    ]
+  },
+  "Ranch": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "At the end of Phase 1, you may discard any number of cards from your hand to draw an equal amount of replacements.",
+    "notes": [
+      "Can only be performed once per turn at the conclusion of drawing."
+    ],
+    "aliases": [
+      "Ranch",
+      "Ranch (Ranch)"
+    ]
+  },
+  "Ricochet": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "A player can discard a BANG! card to target any card in play; it is discarded unless the owner plays a Missed!.",
+    "notes": [
+      "Allows targeted discarding of an opponent's table assets unless they burn a defensive card."
+    ],
+    "aliases": [
+      "Rimbalzo",
+      "Ricochet",
+      "Rimbalzo (Ricochet)"
+    ]
+  },
+  "Russian Roulette": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "When entered, starting from the Sheriff and moving clockwise, each player must discard a Missed! or lose 2 life points.",
+    "notes": [
+      "Triggers immediately upon reveal.",
+      "The effect ends instantly as soon as one player fails to discard and takes the 2 damage."
+    ],
+    "aliases": [
+      "Roulette Russa",
+      "Russian Roulette (Roulette Russa)"
+    ]
+  },
+  "Sniper": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "A player can discard 2 BANG! cards together to target an opponent; it requires 2 Missed! cards to cancel.",
+    "notes": [
+      "Functions identically to a standard shot from Slab the Killer."
+    ],
+    "aliases": [
+      "Cecchino",
+      "Sniper",
+      "Cecchino (Sniper)"
+    ]
+  },
+  "The Judge": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "Players cannot play cards in front of themselves or any other player.",
+    "notes": [
+      "Bans any new blue or green cards from entering play for the round."
+    ],
+    "aliases": [
+      "Il Giudice",
+      "The Judge",
+      "Judge",
+      "Il Giudice (The Judge)"
+    ]
+  },
+  "Vendetta": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "At the end of their turn, a player 'draws!': if Hearts (♥), they immediately take another complete turn.",
+    "notes": [
+      "Allows players to chain multiple consecutive turns if they get lucky checks."
+    ],
+    "aliases": [
+      "Vendetta",
+      "Vendetta (Vendetta)"
+    ]
+  },
+  "A Fistful of Cards": {
+    "expansion": "A Fistful of Cards",
+    "official_text": "At the start of their turn, the active player is targeted by a number of BANG! shots equal to the number of cards in their hand.",
+    "notes": [
+      "This is the final card and stays active permanently until the game ends.",
+      "Each individual shot must be resolved and defended against sequentially."
+    ],
+    "aliases": [
+      "Per un Pugno di Carte",
+      "A Fistful of Cards (Per un Pugno di Carte)"
+    ]
+  },
+  "Bone Orchard": {
+    "expansion": "Wild West Show",
+    "official_text": "Eliminated players return to the game permanently with 1 life point.",
+    "notes": [
+      "Returned players stay alive even after this event card is later replaced by another Wild West Show card."
+    ],
+    "aliases": [
+      "Cimitero",
+      "Bone Orchard (Cimitero)"
+    ]
+  },
+  "Darling Valentine": {
+    "expansion": "Wild West Show",
+    "official_text": "At the start of their turn, players discard their hand and draw a new hand of equal size plus 2 cards.",
+    "notes": [
+      "Completely recycles a player's hand options right before their turn actions."
+    ],
+    "aliases": [
+      "Darling Valentine",
+      "Darling Valentine (Darling Valentine)"
+    ]
+  },
+  "Dorothy Rage": {
+    "expansion": "Wild West Show",
+    "official_text": "On their turn, the active player may name a card; if an opponent has it, they must play it immediately as directed.",
+    "notes": [
+      "The active player chooses who targets whom with the forced card.",
+      "If the opponent claims they do not have the card, they must reveal their hand as proof."
+    ],
+    "aliases": [
+      "Dorothy Rage",
+      "Dorothy Rage (Dorothy Rage)"
+    ]
+  },
+  "Gag": {
+    "expansion": "Wild West Show",
+    "official_text": "No players are allowed to talk. Anyone who speaks out loud loses 1 life point.",
+    "notes": [
+      "Forces complete table silence. Accidental talking deals automatic damage."
+    ],
+    "aliases": [
+      "Silenzio",
+      "Gag",
+      "Gag (Silenzio)"
+    ]
+  },
+  "Helena Zontero": {
+    "expansion": "Wild West Show",
+    "official_text": "When entered, all players 'draw!': on Hearts (♥) or Diamonds (♦), they randomly swap their role card with an unused one from the box.",
+    "notes": [
+      "Triggers immediately when revealed. Shifts alignment goals mid-game."
+    ],
+    "aliases": [
+      "Helena Zontero",
+      "Helena Zontero (Helena Zontero)"
+    ]
+  },
+  "Lady Rose of Texas": {
+    "expansion": "Wild West Show",
+    "official_text": "On their turn, a player may physically switch seats with the player sitting to their right.",
+    "notes": [
+      "Alters layout configurations and changes targeting distances instantly."
+    ],
+    "aliases": [
+      "Lady Rose of Texas",
+      "Lady Rose of Texas (Lady Rose of Texas)"
+    ]
+  },
+  "Miss Susanna": {
+    "expansion": "Wild West Show",
+    "official_text": "Players must play at least 3 cards on their turn or they lose 1 life point.",
+    "notes": [
+      "This restriction does not apply if the active player is trapped in Jail."
+    ],
+    "aliases": [
+      "Miss Susanna",
+      "Miss Susanna (Miss Susanna)"
+    ]
+  },
+  "Sacagaway": {
+    "expansion": "Wild West Show",
+    "official_text": "All players must play with their entire hand laid completely face-up on the table.",
+    "notes": [
+      "Removes hand secrecy completely for the duration of the event."
+    ],
+    "aliases": [
+      "Sacagaway",
+      "Sacagaway (Sacagaway)"
+    ]
+  },
+  "Showdown": {
+    "expansion": "Wild West Show",
+    "official_text": "Every card in a player's hand can be played as if it were a standard BANG! card.",
+    "notes": [
+      "Turns utility cards, defenses, and equipment into offensive capabilities."
+    ],
+    "aliases": [
+      "Showdown",
+      "Showdown (Showdown)"
+    ]
+  },
+  "Wild West Show": {
+    "expansion": "Wild West Show",
+    "official_text": "Secret roles are inverted: every player adopts the Renegade win condition (be the last survivor alive).",
+    "notes": [
+      "This is the final card of the deck and stays active permanently.",
+      "The game no longer ends if the Sheriff is eliminated; victory is purely individual."
+    ],
+    "aliases": [
+      "Wild West Show",
+      "Wild West Show (Wild West Show)"
     ]
   }
 };
@@ -1294,4 +1816,4 @@ const CATEGORY_RULES = {
   }
 };
 
-const DB = { characters: CHARACTERS, brown: BROWN, blue: BLUE, green: GREEN, category_rules: CATEGORY_RULES };
+const DB = { characters: CHARACTERS, brown: BROWN, blue: BLUE, green: GREEN, events: EVENTS, category_rules: CATEGORY_RULES };
